@@ -1,213 +1,244 @@
-        .main-container {
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-            background: #e0e0e0;
-            border: 1px solid #1a1a1ab9;
-            border-radius: 20px;
-            box-shadow: inset 0 0 20px #7a7a7a;
-            transition: 0.5s border ease-in-out;
-        }
+/* Base Styles (Mobile First) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
 
-        .main-container:hover {
-            border: 2px solid #1a1a1ab9;
-            box-shadow: 0 0 20px #000;
-        }
+/* Main container */
+.main-container {
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+    background: #e0e0e0;
+    border: 1px solid #1a1a1ab9;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px #7a7a7a;
+    transition: 0.5s border ease-in-out;
+}
 
-        .game-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: auto;
-            width: 300px;
-            margin: 0 auto;
-        }
+.main-container:hover {
+    border: 2px solid #1a1a1ab9;
+    box-shadow: 0 0 20px #000;
+}
 
-        .cell {
-            width: 80px;
-            height: 80px;
-            margin: 5px;
-            scale: 1;
-            background: rgb(223, 225, 235);
-            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+/* Game Board */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Cell */
+.cell {
+    width: 28vw;
+    max-width: 80px;
+    height: 28vw;
+    max-height: 80px;
+    margin: 1.5vw;
+    background: rgb(223, 225, 235);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px inset,
+                rgba(0, 0, 0, 0.15) 0px -36px 30px inset,
+                rgba(0, 0, 0, 0.1) 0px -79px 40px inset,
                 rgba(0, 0, 0, 0.06) 0px 2px 1px,
                 rgba(0, 0, 0, 0.09) 0px 4px 2px,
                 rgba(0, 0, 0, 0.09) 0px 8px 4px,
                 rgba(0, 0, 0, 0.09) 0px 16px 8px,
                 rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            border: 1px solid #000;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: scale 0.2s ease-in-out;
-            font-family: play, verdana;
-            font-weight: 900;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    max-font-size: 30px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+    font-family: play, verdana;
+    font-weight: 900;
+}
 
+.cell:hover {
+    scale: 1.1;
+}
 
-        .cell:hover {
-            scale: 1.1;
-        }
+.cell.not:hover {
+    background-color: #fff;
+}
 
-        .cell.not:hover {
-            background-color: #fff;
-        }
+/* Buttons */
+.replay,
+.setting,
+.play-game {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Share Tech', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    border: 1px solid #000;
+}
 
-        .replay {
-            margin-top: 20px;
-            padding: 10px 30px;
-            background-color: darkgreen;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-            border: 1px solid #000;
-        }
+.replay {
+    background-color: darkgreen;
+    color: #fff;
+}
 
-        .replay:hover {
-            background-color: #fff;
-            color: darkgreen;
-            border: 1px solid darkgreen;
-        }
+.replay:hover {
+    background-color: #fff;
+    color: darkgreen;
+    border-color: darkgreen;
+}
 
-        .setting {
-            margin-top: 20px;
-            padding: 10px 35px;
-            background-color: darkred;
-            color: #fff;
-            font-weight: bold;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-            border: 1px solid #000;
-        }
+.setting {
+    background-color: darkred;
+    color: #fff;
+}
 
-        .setting:hover {
-            background-color: #fff;
-            color: red;
-            border: 1px solid red;
-        }
+.setting:hover {
+    background-color: #fff;
+    color: red;
+    border-color: red;
+}
 
-        .setting:active,
-        .replay:active {
-            background-color: orange;
-            color: #000;
-        }
+.setting:active,
+.replay:active {
+    background-color: orange;
+    color: #000;
+}
 
-        .icon {
-            margin-right: 10px;
-            display: inline-block;
-            transition: transform 0.3s ease-in-out;
-        }
+.play-game {
+    background-color: chartreuse;
+    color: black;
+    opacity: 0.6;
+    width: 80%;
+    max-width: 200px;
+}
 
-        .icon:hover {
-            transform: rotate(360deg);
-        }
+.play-game:hover {
+    opacity: 1;
+    background-color: #1a1a1a;
+    color: chartreuse;
+    border-color: chartreuse;
+}
 
-        h1 {
-            position: relative;
-            font-family: play, verdana;
-            margin-right: 15px;
-        }
+.play-game:active {
+    background-color: red;
+    color: white;
+}
 
-        h1 span {
-            margin-left: 20px;
-            font-family: 'alfa slab one', verdana;
-            color: orange;
-            font-weight: 100;
-        }
+/* Icon Animation */
+.icon {
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+.icon:hover {
+    transform: rotate(360deg);
+}
 
-        h2 {
-            font-family: Boogaloo, verdana;
-        }
+/* Headings */
+h1 {
+    font-family: play, verdana;
+    margin-right: 15px;
+}
 
-        h2 span {
-            font-weight: 600;
-            font-family: plaster, verdana;
-            color: red;
-        }
+h1 span {
+    margin-left: 20px;
+    font-family: 'Alfa Slab One', verdana;
+    color: orange;
+    font-weight: 100;
+}
 
-        #moremenu {
-            position: absolute;
-            display: none;
-            top: 35%;
-            height: 320px;
-            width: 300px;
-            padding-top: 35px;
-            border-radius: 20px;
-            background-color: #1a1a1a;
-            box-shadow: inset 0 0 10px #ffffffde, inset 0 0 15px #ffffffbd;
-            color: white;
-        }
+h2 {
+    font-family: Boogaloo, verdana;
+}
 
-        #moremenu p {
-            font-family: helvetica;
-            font-size: 16px;
-            font-family: play, verdana;
-            font-weight: 900;
-        }
+h2 span {
+    font-weight: 600;
+    font-family: Plaster, verdana;
+    color: red;
+}
 
-        #SelectPlayer {
-            padding: 5px 10px;
-            background-color: #e6e6e6;
-            color: #000;
-            font-weight: 600;
-            font-size: 15px;
-            border: none;
-            border-radius: 20px;
-            font-family: 'share tech', helvetica;
-        }
+/* More Menu */
+#moremenu {
+    position: absolute;
+    display: none;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    min-height: 320px;
+    width: 90%;
+    max-width: 300px;
+    padding: 35px 10px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    box-shadow: inset 0 0 10px #ffffffde, inset 0 0 15px #ffffffbd;
+    color: white;
+}
 
-        .play-game {
-            height: 40px;
-            border-radius: 50px;
-            border: none;
-            width: 200px;
-            background-color: chartreuse;
-            font-weight: bold;
-            opacity: 0.6;
-            cursor: pointer;
-            transition: color 0.3s ease-in-out;
-        }
+#moremenu p {
+    font-family: play, verdana;
+    font-weight: 900;
+}
 
-        .play-game:hover {
-            opacity: 1;
-            background-color: #1a1a1a;
-            color: chartreuse;
-            border: 1px solid chartreuse;
-        }
+/* Select Dropdown */
+#SelectPlayer {
+    padding: 5px 10px;
+    background-color: #e6e6e6;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Share Tech', helvetica;
+}
 
-        .play-game:active {
-            background-color: red;
-            color: white;
-        }
+/* Popup */
+#popupMsg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    font-family: Plaster, helvetica;
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    font-size: 20px;
+    display: none;
+}
 
-        #popupMsg {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #222;
-            font-family: Plaster, helvetica;
-            color: #fff;
-            padding: 25px 30px;
-            border-radius: 10px;
-            border: 1px solid #fff;
-            font-size: 20px;
-            display: none;
-        }
+/* Universal Button Style */
+button {
+    font-family: 'Share Tech', verdana;
+    font-size: 15px;
+}
 
-        button {
-            font-family: share tech, verdana;
-            font-size: 15px;
-        }
+/* Media Queries for Desktop */
+@media screen and (min-width: 768px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    .play-game {
+        width: 200px;
+    }
+
+    #moremenu {
+        width: 300px;
+    }
+}
