@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitcount+Grid+Double:wght@100..900&family=Boogaloo&family=Notable&family=Plaster&family=Play:wght@400;700&family=Share+Tech&family=Zen+Tokyo+Zoo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main-container">
+        <h1>
+            <span>T</span>ic <span>T</span>ac <span>T</span>oe
+        </h1>
+        <h2>--- Player <span id="player">'X'</span> Turn ---</h2>
+        <div class="game-container">
+            <div class="cell" id="0"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+        </div>
+        <button class="replay">
+            <i class="icon fas fa-redo"></i>
+            Replay
+        </button>
+        <button class="setting">
+            <i class="icon fas fa-cogs"></i>
+            More
+        </button>
+        <div id="moremenu">
+            <h2>--- Settings ---</h2>
+            <p>
+                Play With :
+                <select title="Select Player" id="SelectPlayer">
+                    <option value="bot">
+                        🤖 Bot
+                    </option>
+                    <option value="player">
+                        👤 Player
+                    </option>
+                </select>
+            </p>
+            <p style="margin-top: 70px;">
+                Rules :
+                <br><br>
+                Player 1 : X <br>
+                Player 2 : O
+            </p>
+            <button class="play-game">
+                <i class="icon fas fa-play"></i>
+                Start Game
+            </button>
+        </div>
+    </div>
+    <div id="popupMsg"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
