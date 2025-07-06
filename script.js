@@ -1,4 +1,4 @@
-  const cells = document.querySelectorAll('.cell');
+        const cells = document.querySelectorAll('.cell');
         const setting = document.querySelector('.setting');
         const replay = document.querySelector('.replay');
         const selectPlayer = document.getElementById('SelectPlayer');
