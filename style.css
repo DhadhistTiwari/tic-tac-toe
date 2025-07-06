@@ -1,12 +1,59 @@
- body {
-            background-color: #b4b4b4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            margin: 0;
+        @media (max-width: 500px) {
+          body {
+            flex-direction: column;
+            height: auto;
+            padding: 20px 10px;
+          }
+        
+          .main-container {
+            width: 100%;
+            border-radius: 12px;
+            padding: 15px 10px;
+            box-shadow: none;
+          }
+        
+          h1 {
+            font-size: 1.6rem;
+          }
+        
+          h2 {
+            font-size: 1rem;
+          }
+        
+          .game-container {
+            width: 100%;
+            max-width: 260px;
+          }
+        
+          .cell {
+            width: 70px;
+            height: 70px;
+            font-size: 24px;
+            margin: 4px;
+          }
+        
+          .replay,
+          .setting,
+          .play-game {
+            font-size: 14px;
+            padding: 8px 20px;
+            margin-top: 15px;
+          }
+        
+          #moremenu {
+            width: 90%;
+            height: auto;
+            padding: 20px 10px;
+            top: 30%;
+          }
+        
+          #popupMsg {
+            width: 85%;
+            font-size: 16px;
+            padding: 15px;
+          }
         }
+
 
         .main-container {
             align-items: center;
