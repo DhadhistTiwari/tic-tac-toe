@@ -31,7 +31,7 @@ A simple, stylish Tic Tac Toe game built using **HTML**, **CSS**, and **JavaScri
 
 ## 📸 Preview
 
-> ![Tic Tac Toe Preview](https://github.com/DhadhistTiwari/tic-tac-toe/assets/your-image-id)  
+> ![Tic Tac Toe Preview](preview01.png)  
 
 ---
 
