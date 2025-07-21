@@ -251,3 +251,66 @@ body {
         button {
             font-family: play, verdana;
         }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .main-container {
+        width: 100%;
+        padding: 15px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .game-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .cell {
+        width: 70px;
+        height: 70px;
+        margin: 4px;
+        font-size: 24px;
+    }
+
+    .replay, .setting, .play-game {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    #moremenu {
+        width: 90%;
+        height: auto;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    #popupMsg {
+        width: 90%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    #SelectPlayer {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
